@@ -1,1 +1,1 @@
-SW10X10-6P.dra
+SOT23-BJTN.dra
