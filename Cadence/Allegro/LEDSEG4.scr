@@ -1,10 +1,10 @@
 # Allegro Script
-# File: C:\Library\Cadence\Allegro\New_Parts\SW10X10-6P.scr
+# File: C:\Library\Cadence\Allegro\New_Parts\LEDSEG4.scr
 version 17.4
 
 setwindow pcb
 new
-newdrawfillin "SW10X10-6P.dra" "Package Symbol"
+newdrawfillin "LEDSEG4.dra" "Package Symbol"
 
 Color
 setwindow Form.cvf_main
@@ -29,11 +29,11 @@ FORM prmedit design
 FORM prmedit units Millimeter
 FORM prmedit accuracy 4
 FORM prmedit size Other
-FORM prmedit width 23.9
-FORM prmedit height 21
+FORM prmedit width 39
+FORM prmedit height 22.5
 FORM prmedit Apply
-FORM prmedit x -12
-FORM prmedit y -10.5
+FORM prmedit x -19.5
+FORM prmedit y -11.2
 FORM prmedit done
 setwindow pcb
 
@@ -44,7 +44,7 @@ Form mini rect_or_polar Rectangular
 Form mini x_count 1
 Form mini y_count 1
 Form mini rotate_pin 0.0
-FORM mini pad_name r160_130
+FORM mini pad_name s200
 FORM mini next_pin_number 1
 rotate
 iangle 0
@@ -52,12 +52,18 @@ FORM mini pintype_mechanical NO
 FORM mini offsetx 0
 FORM mini offsety 0
 setwindow pcb
-pick -5.9 4.1
-pick -5.9 1.3
-pick -5.9 -2.4
-pick 5.9 4.1
-pick 5.9 1.3
-pick 5.9 -2.4
+pick -6.35 -5
+pick -3.81 -5
+pick -1.27 -5
+pick 1.27 -5
+pick 3.81 -5
+pick 6.35 -5
+pick 6.35 5
+pick 3.81 5
+pick 1.27 5
+pick -1.27 5
+pick -3.81 5
+pick -6.35 5
 done
 
 add pin
@@ -66,16 +72,18 @@ Form mini rect_or_polar Rectangular
 Form mini x_count 1
 Form mini y_count 1
 Form mini rotate_pin 0.0
-FORM mini pad_name c135h90
-FORM mini next_pin_number 7
+FORM mini pad_name s200
+FORM mini next_pin_number 13
 rotate
 iangle 0
 FORM mini pintype_mechanical YES
 FORM mini offsetx 0
 FORM mini offsety 0
 setwindow pcb
-pick -2.2 2.2
-pick 2.2 2.2
+pick -11.43 -5
+pick 11.43 -5
+pick 11.43 5
+pick -11.43 5
 done
 
 # Graphics
@@ -89,19 +97,19 @@ FORM mini dyns_fill_type Static solid
 FORM mini dyns_grid None
 FORM mini dyns_lock_mode Line
 setwindow pcb
-pick -5.25 -5.5
-pick 5.25 -5.5
-pick 5.25 -3.3
-pick 6.95 -3.3
-pick 6.95 5
-pick 5.25 5
-pick 5.25 5.5
-pick -5.25 5.5
-pick -5.25 5
-pick -6.95 5
-pick -6.95 -3.3
-pick -5.25 -3.3
-pick -5.25 -5.5
+pick -14.5 -5.25
+pick -12.68 -5.25
+pick -12.68 -6.25
+pick 12.68 -6.25
+pick 12.68 -5.25
+pick 14.5 -5.25
+pick 14.5 5.25
+pick 12.68 5.25
+pick 12.68 6.25
+pick -12.68 6.25
+pick -12.68 5.25
+pick -14.5 5.25
+pick -14.5 -5.25
 done
 
 shape add
@@ -112,19 +120,19 @@ FORM mini dyns_fill_type Static solid
 FORM mini dyns_grid None
 FORM mini dyns_lock_mode Line
 setwindow pcb
-pick -5.25 -5.5
-pick 5.25 -5.5
-pick 5.25 -3.3
-pick 6.95 -3.3
-pick 6.95 5
-pick 5.25 5
-pick 5.25 5.5
-pick -5.25 5.5
-pick -5.25 5
-pick -6.95 5
-pick -6.95 -3.3
-pick -5.25 -3.3
-pick -5.25 -5.5
+pick -14.5 -5.25
+pick -12.68 -5.25
+pick -12.68 -6.25
+pick 12.68 -6.25
+pick 12.68 -5.25
+pick 14.5 -5.25
+pick 14.5 5.25
+pick 12.68 5.25
+pick 12.68 6.25
+pick -12.68 6.25
+pick -12.68 5.25
+pick -14.5 5.25
+pick -14.5 -5.25
 done
 
 add line
@@ -134,10 +142,10 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick -5 4.93
-pick -5 5.25
-pick 5 5.25
-pick 5 4.93
+pick 12.61 5
+pick 14.25 5
+pick 14.25 -5
+pick 12.61 -5
 done
 
 add line
@@ -147,10 +155,10 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick 5 -3.23
-pick 5 -5.25
-pick -5 -5.25
-pick -5 -3.23
+pick -12.61 -5
+pick -14.25 -5
+pick -14.25 5
+pick -12.61 5
 done
 
 add line
@@ -160,11 +168,11 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass ASSEMBLY_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick -5 -5.25
-pick -5 5.25
-pick 5 5.25
-pick 5 -5.25
-pick -5 -5.25
+pick -14.25 -5
+pick -14.25 5
+pick 14.25 5
+pick 14.25 -5
+pick -14.25 -5
 done
 
 add line
@@ -174,11 +182,11 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass DISPLAY_TOP
 FORM mini line_width 0.025
 setwindow pcb
-pick -5 -5.25
-pick -5 5.25
-pick 5 5.25
-pick 5 -5.25
-pick -5 -5.25
+pick -14.25 -5
+pick -14.25 5
+pick 14.25 5
+pick 14.25 -5
+pick -14.25 -5
 done
 
 add line
@@ -188,8 +196,8 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick -5 -1.57
-pick -5 0.47
+pick -10.25 5
+pick -7.53 5
 done
 
 add line
@@ -199,8 +207,8 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick -5 2.13
-pick -5 3.27
+pick 7.53 5
+pick 10.25 5
 done
 
 add line
@@ -210,8 +218,8 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick 5 -1.57
-pick 5 0.47
+pick -10.25 -5
+pick -7.53 -5
 done
 
 add line
@@ -221,8 +229,8 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick 5 2.13
-pick 5 3.27
+pick 7.53 -5
+pick 10.25 -5
 done
 
 add circle
@@ -264,7 +272,7 @@ setwindow pcb
 package_height
 pick grid 0 0
 setwindow Form.mini
-FORM mini height_max 2.3mm
+FORM mini height_max 0.8mm
 setwindow pcb
 done
 
@@ -289,7 +297,7 @@ FORM findname done
 setwindow Form.editprop1
 FORM editprop1 properties Description
 setwindow Form.editprop2
-FORM editprop2 Description ele_prop_value "Switch,6 pin, 10.00 mm L X 10.50 mm W X 9.00 mm H body; 6 pin"
+FORM editprop2 Description ele_prop_value "4-digit digital tube, 16 pin"
 setwindow Form.editprop1
 FORM editprop1 done
 
@@ -341,7 +349,7 @@ setwindow pcb
 generaledit
 step pkg map
 setwindow Form.pkgmap3d
-FORM pkgmap3d stplist SW10X10-6P.step
+FORM pkgmap3d stplist LEDSEG4.step
 FORM pkgmap3d offset_x 0
 FORM pkgmap3d offset_y 0
 FORM pkgmap3d offset_z 0
