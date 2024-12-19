@@ -1,0 +1,55 @@
+# Allegro Script
+# File: C:\Library\Cadence\Allegro\CMPLX-1_85-4_6.psx
+version 17.4
+
+new
+newdrawfillin "CMPLX-1_85-4_6.dra" "Shape Symbol"
+setwindow pcb
+
+# Drawing Parameters
+QtSignal SPBDesignInitPrompt spbdip_ok_button clicked
+
+prmed
+setwindow Form.prmedit
+FORM prmedit design
+FORM prmedit units Millimeter
+FORM prmedit accuracy 4
+FORM prmedit size Other
+FORM prmedit x -10
+FORM prmedit y -10
+FORM prmedit width 20
+FORM prmedit height 20
+FORM prmedit x -10
+FORM prmedit y -10
+FORM prmedit done
+setwindow pcb
+
+# Graphics
+shape add
+setwindow Form.mini
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass
+FORM mini dyns_fill_type Static solid
+FORM mini dyns_grid None
+FORM mini dyns_lock_mode Line
+setwindow pcb
+pick -0.4 -2.425
+pick 0.4 -2.425
+pick 0.4 -0.95
+pick 0.925 -0.95
+pick 0.925 2.175
+pick -0.925 2.175
+pick -0.925 -0.95
+pick -0.4 -0.95
+pick -0.4 -2.425
+done
+
+zoom fit
+save_as
+fillin "cmplx-1_85-4_6.dra"
+create symbol
+fillin "cmplx-1_85-4_6.ssm"
+exit
+fillin yes
+
+# end

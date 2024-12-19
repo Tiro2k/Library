@@ -1,0 +1,381 @@
+# Allegro Script
+# File: C:\Library\Cadence\Allegro\ESP32-S3-WROOM-1.scr
+version 17.4
+
+setwindow pcb
+new
+newdrawfillin "ESP32-S3-WROOM-1.dra" "Package Symbol"
+
+Color
+setwindow Form.cvf_main
+FORM cvf_main class_list Components
+FORM cvf_main all_visible1 YES
+FORM cvf_main all_visible2 YES
+FORM cvf_main all_visible3 YES
+FORM cvf_main class_list Geometry
+FORM cvf_main all_visible5 YES
+FORM cvf_main package_geometry/pin_number/visible NO
+FORM cvf_main class_list Stack-Up
+FORM cvf_main all_visible1 YES
+FORM cvf_main ok
+
+# Drawing Parameters
+QtSignal SPBDesignInitPrompt spbdip_ok_button clicked
+
+generaledit
+prmed
+setwindow Form.prmedit
+FORM prmedit design
+FORM prmedit units Millimeter
+FORM prmedit accuracy 4
+FORM prmedit size Other
+FORM prmedit width 29.5
+FORM prmedit height 36.5
+FORM prmedit Apply
+FORM prmedit x -14.8
+FORM prmedit y -18.5
+FORM prmedit done
+setwindow pcb
+
+# Pin Generation
+add pin
+setwindow Form.mini
+Form mini rect_or_polar Rectangular
+Form mini x_count 1
+Form mini y_count 1
+Form mini rotate_pin 0.0
+FORM mini pad_name r150_90
+FORM mini next_pin_number 1
+rotate
+iangle 0
+FORM mini pintype_mechanical NO
+FORM mini offsetx 0
+FORM mini offsety 0
+setwindow pcb
+pick -8.75 5.26
+pick -8.75 3.99
+pick -8.75 2.72
+pick -8.75 1.45
+pick -8.75 0.18
+pick -8.75 -1.09
+pick -8.75 -2.36
+pick -8.75 -3.63
+pick -8.75 -4.9
+pick -8.75 -6.17
+pick -8.75 -7.44
+pick -8.75 -8.71
+pick -8.75 -9.98
+pick -8.75 -11.25
+setwindow Form.mini
+FORM mini pad_name r90_150
+setwindow pcb
+pick -6.985 -12.5
+pick -5.715 -12.5
+pick -4.445 -12.5
+pick -3.175 -12.5
+pick -1.905 -12.5
+pick -0.635 -12.5
+pick 0.635 -12.5
+pick 1.905 -12.5
+pick 3.175 -12.5
+pick 4.445 -12.5
+pick 5.715 -12.5
+pick 6.985 -12.5
+setwindow Form.mini
+FORM mini pad_name r150_90
+setwindow pcb
+pick 8.75 -11.25
+pick 8.75 -9.98
+pick 8.75 -8.71
+pick 8.75 -7.44
+pick 8.75 -6.17
+pick 8.75 -4.9
+pick 8.75 -3.63
+pick 8.75 -2.36
+pick 8.75 -1.09
+pick 8.75 0.18
+pick 8.75 1.45
+pick 8.75 2.72
+pick 8.75 3.99
+pick 8.75 5.26
+setwindow Form.mini
+FORM mini pad_name s90
+setwindow pcb
+pick -2.9 -1.06
+done
+
+add pin
+setwindow Form.mini
+Form mini rect_or_polar Rectangular
+Form mini x_count 1
+Form mini y_count 1
+Form mini rotate_pin 0.0
+FORM mini pad_name s90
+FORM mini next_pin_number 42
+rotate
+iangle 0
+FORM mini pintype_mechanical YES
+FORM mini offsetx 0
+FORM mini offsety 0
+setwindow pcb
+pick -1.5 -1.06
+pick -0.1 -1.06
+pick -2.9 -2.46
+pick -1.5 -2.46
+pick -0.1 -2.46
+pick -2.9 -3.86
+pick -1.5 -3.86
+pick -0.1 -3.86
+done
+
+# Graphics
+set addline_nomerge
+
+shape add
+setwindow Form.mini
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass PLACE_BOUND_TOP
+FORM mini dyns_fill_type Static solid
+FORM mini dyns_grid None
+FORM mini dyns_lock_mode Line
+setwindow pcb
+pick -9.25 -13
+pick -7.685 -13
+pick -7.685 -13.5
+pick 7.685 -13.5
+pick 7.685 -13
+pick 9.25 -13
+pick 9.25 -11.95
+pick 9.75 -11.95
+pick 9.75 5.96
+pick 9.25 5.96
+pick 9.25 13
+pick -9.25 13
+pick -9.25 5.96
+pick -9.75 5.96
+pick -9.75 -11.95
+pick -9.25 -11.95
+pick -9.25 -13
+done
+
+shape add
+setwindow Form.mini
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass DFA_BOUND_TOP
+FORM mini dyns_fill_type Static solid
+FORM mini dyns_grid None
+FORM mini dyns_lock_mode Line
+setwindow pcb
+pick -9.25 -13
+pick -7.685 -13
+pick -7.685 -13.5
+pick 7.685 -13.5
+pick 7.685 -13
+pick 9.25 -13
+pick 9.25 -11.95
+pick 9.75 -11.95
+pick 9.75 5.96
+pick 9.25 5.96
+pick 9.25 13
+pick -9.25 13
+pick -9.25 5.96
+pick -9.75 5.96
+pick -9.75 -11.95
+pick -9.25 -11.95
+pick -9.25 -13
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass SILKSCREEN_TOP
+FORM mini line_width 0.12
+setwindow pcb
+pick -9 5.89
+pick -9 12.75
+pick 9 12.75
+pick 9 5.89
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass SILKSCREEN_TOP
+FORM mini line_width 0.12
+setwindow pcb
+pick 9 -11.88
+pick 9 -12.75
+pick 7.615 -12.75
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass SILKSCREEN_TOP
+FORM mini line_width 0.12
+setwindow pcb
+pick -7.615 -12.75
+pick -9 -12.75
+pick -9 -11.88
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass ASSEMBLY_TOP
+FORM mini line_width 0.12
+setwindow pcb
+pick -9 -12.75
+pick -9 12.75
+pick 9 12.75
+pick 9 -12.75
+pick -9 -12.75
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass DISPLAY_TOP
+FORM mini line_width 0.025
+setwindow pcb
+pick -9 -12.75
+pick -9 12.75
+pick 9 12.75
+pick 9 -12.75
+pick -9 -12.75
+done
+
+add circle
+setwindow Form.mini
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass PLACE_BOUND_TOP
+FORM mini line_width 0.05
+setwindow pcb
+pick 0 0
+pick 0.25 0
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass PLACE_BOUND_TOP
+FORM mini line_width 0.05
+setwindow pcb
+pick 0.35 0
+pick -0.35 0
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass PLACE_BOUND_TOP
+FORM mini line_width 0.05
+setwindow pcb
+pick 0 0.35
+pick 0 -0.35
+done
+
+unset addline_nomerge
+
+# Attributes
+setwindow pcb
+package_height
+pick grid 0 0
+setwindow Form.mini
+FORM mini height_max 2mm
+setwindow pcb
+done
+
+define property
+setwindow Form.dpr_select
+FORM dpr_select name DESCRIPTION
+setwindow Form.dpr_define
+FORM dpr_define shapes_elem YES
+FORM dpr_define symbols_elem YES
+FORM dpr_define data_type STRING
+FORM dpr_define apply
+setwindow Form.dpr_select
+FORM dpr_select done
+
+property edit
+setwindow Form.find
+FORM find name_type Drawing
+FORM find find_by_name
+setwindow Form.findname
+FORM findname objlist 'Drawing Select'
+FORM findname done
+setwindow Form.editprop1
+FORM editprop1 properties Description
+setwindow Form.editprop2
+FORM editprop2 Description ele_prop_value "Module; 49 pin, 18.00 mm L X 25.50 mm W X 2.00 mm H body"
+setwindow Form.editprop1
+FORM editprop1 done
+
+# Labels
+Label refdes
+setwindow Form.mini
+FORM mini text_block 3
+FORM mini angle 0
+FORM mini mirror NO
+FORM mini text_justification Center
+FORM mini class REF DES
+FORM mini subclass ASSEMBLY_TOP
+setwindow pcb
+pick 0 0
+Text "REF"
+done
+setwindow pcb
+
+Label device
+setwindow Form.mini
+FORM mini text_block 3
+FORM mini angle 0
+FORM mini mirror NO
+FORM mini text_justification Center
+FORM mini class DEVICE TYPE
+FORM mini subclass ASSEMBLY_TOP
+setwindow pcb
+pick 0 0
+Text "DEV"
+done
+setwindow pcb
+
+Label refdes
+setwindow Form.mini
+FORM mini text_block 3
+FORM mini angle 0
+FORM mini mirror NO
+FORM mini text_justification Center
+FORM mini class REF DES
+FORM mini subclass SILKSCREEN_TOP
+setwindow pcb
+pick 0 0
+Text "REF"
+done
+setwindow pcb
+
+# 3D STEP Model Placement
+setwindow pcb
+generaledit
+step pkg map
+setwindow Form.pkgmap3d
+FORM pkgmap3d stplist ESP32-S3-WROOM-1.step
+FORM pkgmap3d offset_x 0
+FORM pkgmap3d offset_y 0
+FORM pkgmap3d offset_z 0
+FORM pkgmap3d save_current
+FORM pkgmap3d done
+setwindow pcb
+generaledit
+
+zoom fit
+save
+exit
+# END
