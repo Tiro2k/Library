@@ -1,10 +1,10 @@
 # Allegro Script
-# File: C:\Library\Cadence\Allegro\USBC16P-BK.scr
+# File: C:\Library\Cadence\Allegro\HDR2P\HDR2P.scr
 version 17.4
 
 setwindow pcb
 new
-newdrawfillin "USBC16P-BK.dra" "Package Symbol"
+newdrawfillin "HDR2P.dra" "Package Symbol"
 
 Color
 setwindow Form.cvf_main
@@ -29,11 +29,11 @@ FORM prmedit design
 FORM prmedit units Millimeter
 FORM prmedit accuracy 4
 FORM prmedit size Other
-FORM prmedit width 22.2
-FORM prmedit height 19.2
+FORM prmedit width 16
+FORM prmedit height 13
 FORM prmedit Apply
-FORM prmedit x -11.1
-FORM prmedit y -7.7
+FORM prmedit x -7
+FORM prmedit y -6.5
 FORM prmedit done
 setwindow pcb
 
@@ -44,7 +44,7 @@ Form mini rect_or_polar Rectangular
 Form mini x_count 1
 Form mini y_count 1
 Form mini rotate_pin 0.0
-FORM mini pad_name r60_115
+FORM mini pad_name s158h105
 FORM mini next_pin_number 1
 rotate
 iangle 0
@@ -52,53 +52,11 @@ FORM mini pintype_mechanical NO
 FORM mini offsetx 0
 FORM mini offsety 0
 setwindow pcb
-pick -3.2 5.665
-pick -2.4 5.665
+pick 0 0
 setwindow Form.mini
-FORM mini pad_name r30_115
+FORM mini pad_name c158h105
 setwindow pcb
-pick -1.75 5.665
-pick -1.25 5.665
-pick -0.75 5.665
-pick -0.25 5.665
-pick 0.25 5.665
-pick 0.75 5.665
-pick 1.25 5.665
-pick 1.75 5.665
-setwindow Form.mini
-FORM mini pad_name r60_115
-setwindow pcb
-pick 2.4 5.665
-pick 3.2 5.665
-setwindow Form.mini
-FORM mini pad_name s150
-FORM mini next_pin_number M1
-setwindow pcb
-pick -5.12 5.1
-pick 5.12 5.1
-pick -5.12 1.17
-pick 5.12 1.17
-done
-
-add pin
-setwindow Form.mini
-Form mini rect_or_polar Rectangular
-Form mini x_count 1
-Form mini y_count 1
-Form mini rotate_pin 0.0
-FORM mini pad_name c32hn65k142
-FORM mini next_pin_number MH2
-rotate
-iangle 0
-FORM mini pintype_mechanical YES
-FORM mini offsetx 0
-FORM mini offsety 0
-setwindow pcb
-pick 2.89 4.6
-setwindow Form.mini
-FORM mini next_pin_number MH1
-setwindow pcb
-pick -2.89 4.6
+pick 2.54 0
 done
 
 # Graphics
@@ -108,13 +66,43 @@ add line
 setwindow Form.mini
 FORM mini lock_direction Off
 FORM mini class PACKAGE GEOMETRY
+FORM mini subclass DISPLAY_TOP
+FORM mini line_width 0.025
+setwindow pcb
+pick 2.22 -0.32
+pick 2.22 0.32
+pick 2.86 0.32
+pick 2.86 -0.32
+pick 2.22 -0.32
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
+FORM mini subclass DISPLAY_TOP
+FORM mini line_width 0.025
+setwindow pcb
+pick -0.32 -0.32
+pick -0.32 0.32
+pick 0.32 0.32
+pick 0.32 -0.32
+pick -0.32 -0.32
+done
+
+add line
+setwindow Form.mini
+FORM mini lock_direction Off
+FORM mini class PACKAGE GEOMETRY
 FORM mini subclass ASSEMBLY_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick -3.35 4.055
-pick -3.058 4.561
-pick -3.642 4.561
-pick -3.35 4.055
+pick -1.27 1.25
+pick -1.27 -0.417
+pick -0.437 -1.25
+pick 3.81 -1.25
+pick 3.81 1.25
+pick -1.27 1.25
 done
 
 shape add
@@ -125,15 +113,11 @@ FORM mini dyns_fill_type Static solid
 FORM mini dyns_grid None
 FORM mini dyns_lock_mode Line
 setwindow pcb
-pick -5.29 -2.72
-pick 5.29 -2.72
-pick 5.29 0.17
-pick 6.12 0.17
-pick 6.12 6.49
-pick -6.12 6.49
-pick -6.12 0.17
-pick -5.29 0.17
-pick -5.29 -2.72
+pick -1.52 -1.5
+pick -1.52 1.5
+pick 4.06 1.5
+pick 4.06 -1.5
+pick -1.52 -1.5
 done
 
 shape add
@@ -144,15 +128,11 @@ FORM mini dyns_fill_type Static solid
 FORM mini dyns_grid None
 FORM mini dyns_lock_mode Line
 setwindow pcb
-pick -5.29 -2.72
-pick 5.29 -2.72
-pick 5.29 0.17
-pick 6.12 0.17
-pick 6.12 6.49
-pick -6.12 6.49
-pick -6.12 0.17
-pick -5.29 0.17
-pick -5.29 -2.72
+pick -1.52 -1.5
+pick -1.52 1.5
+pick 4.06 1.5
+pick 4.06 -1.5
+pick -1.52 -1.5
 done
 
 add line
@@ -162,24 +142,11 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
 FORM mini line_width 0.12
 setwindow pcb
-pick 4.79 0.24
-pick 4.79 -2.22
-pick -4.79 -2.22
-pick -4.79 0.24
-done
-
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass ASSEMBLY_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick -4.79 -2.22
-pick -4.79 4.56
-pick 4.79 4.56
-pick 4.79 -2.22
-pick -4.79 -2.22
+pick -1.27 -1.25
+pick -1.27 1.25
+pick 3.81 1.25
+pick 3.81 -1.25
+pick -1.27 -1.25
 done
 
 add line
@@ -189,66 +156,21 @@ FORM mini class PACKAGE GEOMETRY
 FORM mini subclass DISPLAY_TOP
 FORM mini line_width 0.025
 setwindow pcb
-pick -4.79 -2.22
-pick -4.79 4.56
-pick 4.79 4.56
-pick 4.79 -2.22
-pick -4.79 -2.22
+pick -1.27 -1.25
+pick -1.27 1.25
+pick 3.81 1.25
+pick 3.81 -1.25
+pick -1.27 -1.25
 done
 
-add line
+add circle
 setwindow Form.mini
-FORM mini lock_direction Off
 FORM mini class PACKAGE GEOMETRY
 FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.12
+FORM mini line_width 0.25
 setwindow pcb
-pick -4.19 4.56
-pick -3.395 4.56
-done
-
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick -2.385 4.56
-pick 2.385 4.56
-done
-
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick 3.395 4.56
-pick 4.19 4.56
-done
-
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick -4.79 2.1
-pick -4.79 4.17
-done
-
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick 4.79 2.1
-pick 4.79 4.17
+pick -1.7 0
+pick -1.575 0
 done
 
 add circle
@@ -283,53 +205,6 @@ pick 0 0.35
 pick 0 -0.35
 done
 
-add line
-setwindow Form.mini
-FORM mini lock_direction Off
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass ASSEMBLY_TOP
-FORM mini line_width 0.12
-setwindow pcb
-pick -4.94 -2.62
-pick 4.94 -2.62
-done
-
-add circle
-setwindow Form.mini
-FORM mini class PACKAGE GEOMETRY
-FORM mini subclass SILKSCREEN_TOP
-FORM mini line_width 0.2
-setwindow pcb
-pick -3.9 5.37
-pick -3.8 5.37
-done
-
-shape add circle
-setwindow Form.mini
-FORM mini class ROUTE KEEPOUT
-FORM mini subclass ALL
-FORM mini dyns_fill_type Static solid
-FORM mini dyns_grid None
-FORM mini line_width 0
-FORM mini dyns_lock_mode Arc
-setwindow pcb
-pick 2.89 4.6
-pick 3.6 4.6
-done
-
-shape add circle
-setwindow Form.mini
-FORM mini class ROUTE KEEPOUT
-FORM mini subclass ALL
-FORM mini dyns_fill_type Static solid
-FORM mini dyns_grid None
-FORM mini line_width 0
-FORM mini dyns_lock_mode Arc
-setwindow pcb
-pick -2.89 4.6
-pick -2.18 4.6
-done
-
 unset addline_nomerge
 
 # Attributes
@@ -337,7 +212,7 @@ setwindow pcb
 package_height
 pick grid 0 0
 setwindow Form.mini
-FORM mini height_max 3.51mm
+FORM mini height_max 8.5mm
 setwindow pcb
 done
 
@@ -362,7 +237,7 @@ FORM findname done
 setwindow Form.editprop1
 FORM editprop1 properties Description
 setwindow Form.editprop2
-FORM editprop2 Description ele_prop_value "Connector, USB Receptacle Right Angle; 16 pin, 9.58 mm L X 6.78 mm W X 3.51 mm H body"
+FORM editprop2 Description ele_prop_value "Header, Vertical Non-Shrouded, 2.54 mm pitch; 0.64 mm lead width, 2 pins, 1 row, 2 pins per row, 5.08 mm L X 2.50 mm W X 8.50 mm H body"
 setwindow Form.editprop1
 FORM editprop1 done
 
@@ -408,20 +283,6 @@ pick 0 0
 Text "REF"
 done
 setwindow pcb
-
-# 3D STEP Model Placement
-setwindow pcb
-generaledit
-step pkg map
-setwindow Form.pkgmap3d
-FORM pkgmap3d stplist USBC16P-BK.step
-FORM pkgmap3d offset_x 0
-FORM pkgmap3d offset_y 0
-FORM pkgmap3d offset_z 0
-FORM pkgmap3d save_current
-FORM pkgmap3d done
-setwindow pcb
-generaledit
 
 zoom fit
 save
